@@ -1,12 +1,15 @@
 <template>
   <UContainer>
     <!-- Header (nav) -->
+     <UHeader title="원희야 돌아와" >
+        <UNavigationMenu :items="items" variant="link" />
+     </UHeader>
     <slot />
     <!-- Footer -->
     <UFooter>
       <template #left>
         <p class="text-muted text-sm">
-          Copyright Tim Mushen ©{{ new Date().getFullYear() }}
+          Copyright Hojin Choi ©{{ new Date().getFullYear() }}
         </p>
       </template>
 

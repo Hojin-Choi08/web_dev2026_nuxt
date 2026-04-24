@@ -3,11 +3,11 @@ import Cta from "./components/Cta.vue";
 </script>
 
 <template>
-  <UApp>
-    <TopNav />
-    <MainNav />
-    <Hero />
-    <Cta />
-    <Footer />
-  </UApp>
+  <main class="bg-gray-300 h-screen p-4">
+    <UApp>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UApp>
+  </main>
 </template>

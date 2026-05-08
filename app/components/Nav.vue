@@ -2,16 +2,16 @@
   <nav>
     <ul class="flex flex-row gap-4">
       <li>
-        <NuxtLink to="/">Home Page</NuxtLink>
+        <NuxtLink to="/">Home</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/about">About Page</NuxtLink>
+        <NuxtLink to="/about">About</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/contact">Contact Page</NuxtLink>
+        <NuxtLink to="/contact">Contact</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/services">Services Page</NuxtLink>
+        <NuxtLink to="/portfolio">Portfolio</NuxtLink>
       </li>
     </ul>
   </nav>

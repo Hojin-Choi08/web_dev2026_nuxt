@@ -1,25 +1,27 @@
 <template>
   <div>
-    <Header pageTitle="About Page" />
-    <UAccordion :items="items" />
+    <UContainer>
+      <UPageHeader
+        title="About Me"
+        description="Learn more about who I am and what I do."
+      />
+    </UContainer>
+
+    <UPageBody>
+      <UPageSection title="Who Am I?">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img
+            src="https://picsum.photos/200/200?random=99"
+            class="rounded-full w-40 h-40 object-cover shadow-lg"
+            alt="Profile photo"
+          />
+          <p class="text-gray-500">
+            I'm a front-end developer passionate about creating beautiful,
+            user-friendly web applications using modern tools like Vue, Nuxt,
+            and Tailwind CSS.
+          </p>
+        </div>
+      </UPageSection>
+    </UPageBody>
   </div>
 </template>
-<script setup>
-const items = [
-  {
-    label: "Is Nuxt UI free to use?",
-    content:
-      "Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.",
-  },
-  {
-    label: "Can I use Nuxt UI with Vue without Nuxt?",
-    content:
-      "Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.",
-  },
-  {
-    label: "Is Nuxt UI production-ready?",
-    content:
-      "Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.",
-  },
-];
-</script>

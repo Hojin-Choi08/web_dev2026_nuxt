@@ -1,51 +1,31 @@
 <template>
-  <UContainer>
-    <!-- Header (nav) -->
-     <UHeader title="원희야 돌아와" >
-        <UNavigationMenu :items="items" variant="link" />
-     </UHeader>
-    <slot />
-    <!-- Footer -->
+  <UApp>
+    <UHeader>
+      <template #left>
+        <NuxtLink to="/" class="font-bold text-xl">My Portfolio</NuxtLink>
+      </template>
+      <UNavigationMenu :items="navItems" />
+    </UHeader>
+
+    <main>
+      <slot />
+    </main>
+
     <UFooter>
       <template #left>
-        <p class="text-muted text-sm">
-          Copyright Hojin Choi ©{{ new Date().getFullYear() }}
+        <p class="text-sm text-gray-500">
+          © 2026 My Portfolio. All rights reserved.
         </p>
       </template>
-
-      <!-- Center Nav -->
-      <UNavigationMenu :items="items" variant="link" />
-
-      <template #right>
-        <UButton
-          icon="i-simple-icons-linkedin"
-          variant="outline"
-          color="neutral"
-          size="sm"
-          to="https://linkedin.com/in/timmushen"
-          target="_blank"
-        />
-      </template>
     </UFooter>
-  </UContainer>
+  </UApp>
 </template>
+
 <script setup>
-const items = [
-  {
-    label: "Home Page",
-    to: "/",
-  },
-  {
-    label: "About",
-    to: "/about",
-  },
-  {
-    label: "Portfolio",
-    to: "/portfolio",
-  },
-  {
-    label: "Contact",
-    to: "/contact",
-  },
+const navItems = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Portfolio", to: "/portfolio" },
+  { label: "Contact", to: "/contact" },
 ];
 </script>
